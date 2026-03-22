@@ -21,9 +21,14 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      lib: path.resolve(__dirname, 'src/lib'),
+      features: path.resolve(__dirname, 'src/features'),
+      shared: path.resolve(__dirname, 'src/shared'),
       _tosslib: path.resolve(__dirname, 'src/_tosslib'),
       pages: path.resolve(__dirname, 'src/pages'),
+      queries: path.resolve(__dirname, 'src/queries'),
       containers: path.resolve(__dirname, 'src/containers'),
+
       components: path.resolve(__dirname, 'src/components'),
       sections: path.resolve(__dirname, 'src/sections'),
       constants: path.resolve(__dirname, 'src/constants'),
@@ -45,5 +50,10 @@ export default defineConfig({
     setupFiles: './vitest.setup.ts',
     css: true,
     testTimeout: 10000,
+    server: {
+      deps: {
+        inline: [/suspensive/],
+      },
+    },
   },
 });

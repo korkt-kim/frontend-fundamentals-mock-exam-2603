@@ -25,9 +25,14 @@
     /* Path alias */
     "baseUrl": "src",
     "paths": {
+      "lib/*": ["lib/*"],
+      "features/*": ["features/*"],
+      "shared/*": ["shared/*"],
       "_tosslib/*": ["_tosslib/*"],
       "pages/*": ["pages/*"],
+      "queries/*": ["queries/*"],
       "containers/*": ["containers/*"],
+
       "components/*": ["components/*"],
       "sections/*": ["sections/*"],
       "constants/*": ["constants/*"],
